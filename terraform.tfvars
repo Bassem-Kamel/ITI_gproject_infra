@@ -1,5 +1,5 @@
 
-project_id = "pythonapp-project"
+project_id = "iti-gproject"
 
 region          = "europe-west1"
 vpc_name        = "myvpc"
