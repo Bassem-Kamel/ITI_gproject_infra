@@ -23,7 +23,7 @@ resource "google_compute_instance" "bastion-vm" {
       // Ephemeral public IP
     }
   }
-  
+
   depends_on = [
     module.network
   ]
