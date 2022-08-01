@@ -1,6 +1,6 @@
 resource "google_compute_instance" "bastion-vm" {
   name                      = "bastion-vm"
-  project                   = "pythonapp-project"
+  project                   = "iti-gproject"
   machine_type              = var.vm_type
   zone                      = var.vm_zone
   allow_stopping_for_update = true

@@ -9,12 +9,12 @@ variable "net_region" {
   type = string
 }
 
-variable "net_manage_cidr" {
+variable "net_bastion_cidr" {
   type = string
 }
 
 
-variable "net_restricted_cidr" {
+variable "net_cluster_cidr" {
   type = string
 }
 

@@ -10,10 +10,10 @@ variable "vpc_name" {
 variable "region" {
   type = string
 }
-variable "manage_cidr" {
+variable "bastion_cidr" {
   type = string
 }
-variable "restricted_cidr" {
+variable "cluster_cidr" {
   type = string
 }
 

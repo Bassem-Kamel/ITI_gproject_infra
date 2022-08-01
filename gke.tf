@@ -39,7 +39,7 @@ resource "google_container_node_pool" "node-pool1" {
   project    = var.project_id
   cluster    = google_container_cluster.my-cluster1.name     #The cluster to create the node pool for.
   location   = google_container_cluster.my-cluster1.location #The location (region or zone) of the cluster.
-  node_count = 2                                            #The number of nodes per instance group
+  node_count = 2                                             #The number of nodes per instance group
   node_config {                                              #Parameters used in creating the node pool
     image_type      = "COS_CONTAINERD"
     machine_type    = "e2-medium"
