@@ -1,10 +1,10 @@
 
-resource "google_compute_firewall" "allow_iap" {
+resource "google_compute_firewall" "allow_ssh" {
   project       = var.project_id
-  name          = "allow-iap"
+  name          = "allow-ssh"
   network       = var.vpc_name
   direction     = "INGRESS"
-  source_ranges = ["35.235.240.0/20"] # IAP CIDR
+  source_ranges = ["0.0.0.0/0"] # all ips
   #the firewall will apply only to traffic that has source IP address in these ranges
 
   allow {

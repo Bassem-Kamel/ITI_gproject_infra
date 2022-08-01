@@ -18,8 +18,12 @@ resource "google_compute_instance" "bastion-vm" {
 
   network_interface {
     network    = module.network.out_vpc_name
-    subnetwork = module.network.out_mangement-sub_name
+    subnetwork = module.network.out_bastion-sub_name
+    access_config {
+      // Ephemeral public IP
+    }
   }
+  
   depends_on = [
     module.network
   ]

@@ -6,12 +6,12 @@ resource "google_compute_router_nat" "nat" {
   source_subnetwork_ip_ranges_to_nat = "LIST_OF_SUBNETWORKS" #A list of Subnetworks are allowed to Nat (specified in the field subnetwork below)
 
   subnetwork {
-    name                    = google_compute_subnetwork.mangement-sub.id
+    name                    = google_compute_subnetwork.bastion-sub.id
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
 
     subnetwork {
-    name                    = google_compute_subnetwork.restricted-sub.id
+    name                    = google_compute_subnetwork.cluster-sub.id
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
 }

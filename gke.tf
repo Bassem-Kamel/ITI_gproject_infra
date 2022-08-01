@@ -3,7 +3,7 @@ resource "google_container_cluster" "my-cluster1" {
   name                     = "my-cluster1"
   location                 = "europe-west1-b" #The location (region or zone) in which the cluster master will be created.
   network                  = module.network.out_vpc_name
-  subnetwork               = module.network.out_restricted-sub_name
+  subnetwork               = module.network.out_cluster-sub_name
   remove_default_node_pool = true
   initial_node_count       = 1 #The number of nodes to create in this cluster's default node pool
   #if you're using google_container_node_pool objects with no default node pool, you'll need to set this to a value of at least 1,
@@ -23,8 +23,8 @@ resource "google_container_cluster" "my-cluster1" {
   }
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block   = var.manage_cidr #external networks that can access the Kubernetes cluster master through HTTPS
-      display_name = "management-sub"
+      cidr_block   = var.bastion_cidr #external networks that can access the Kubernetes cluster master through HTTPS
+      display_name = "bastion-sub"
     }
   }
 

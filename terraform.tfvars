@@ -1,9 +1,9 @@
 
 project_id = "iti-gproject"
 
-region          = "europe-west1"
-vpc_name        = "myvpc"
-bastion_cidr     = "10.0.1.0/24"
+region       = "europe-west1"
+vpc_name     = "myvpc"
+bastion_cidr = "10.0.1.0/24"
 cluster_cidr = "10.0.3.0/24"
 
 vm_type  = "e2-micro"

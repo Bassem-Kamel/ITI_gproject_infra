@@ -3,9 +3,9 @@ output "out_vpc_name" {
   
 }
 output "out_bastion-sub_name" {
-  value = google_compute_subnetwork.mangement-sub.name
+  value = google_compute_subnetwork.bastion-sub.name
 }
 
 output "out_cluster-sub_name" {
-  value = google_compute_subnetwork.restricted-sub.name
+  value = google_compute_subnetwork.cluster-sub.name
 }
