@@ -23,6 +23,6 @@ resource "google_project_iam_member" "gke_role1" {
 }
 resource "google_project_iam_member" "gke_role2" {
   project = var.project_id
-  role    = "roles/artifactregistry.admin"
+  role    = "roles/container.admin"
   member  = "serviceAccount:${google_service_account.gke-node-sa.email}"
 }

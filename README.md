@@ -1,33 +1,18 @@
-<h1 align="center">CI/CD pipeline to deploy app (still in progress)</h1>
+# ITI-Graduation-Project
 
-<h2 align="center">Infrastructure</h2>
-
-<div id="header" align="center">
-  <img src="" width="200"/>
-</div>
-
-# 
+## Infra
 
 ## Requirements :
 
+### 1. Create infrastructure on GCP
 
-## Project schema:
+### 2. Configure bastion-vm
 
-![project.png](images/project.png)
+### 3. Customize jenkins image and create jenkins deployment
 
-## Steps :
+![Untitled](images/Untitled.png)
 
-### 1. 
-
-```bash
-
-```
-<p align="center">
-  <img src="images/repo.png" width="500" height="230" title="hover text">
-</p>
-
-
-### 2. Create the infrastructure using Terraform
+## 1. Build infrastructure using Terraform
 
 - Network components
 - Firewalls
@@ -35,39 +20,74 @@
 - Bastion - vm
 - GKE
 
-### 3. Configure the bastion - vm
-
 ```bash
-#install google-cloud-sdk
-sudo apt-get install apt-transport-https ca-certificates gnupg
-
-echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] \
-https://packages.cloud.google.com/apt cloud-sdk main" \
-| sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
-| sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-
-sudo apt update
-sudo apt install google-cloud-sdk
-
-#install kubectl
-sudo apt-get install kubectl
-
-#connect to the gke master
-sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
-gcloud container clusters get-credentials cluster-name \
---zone europe-west1-b --project project-id
+Terraform apply
 ```
 
-### 4. Create deployments and services using kubectl :
+## 2. Configure bastion-vm
 
-![k8s.png](images/k8s.png)
+- apt update
+- install gcloud sdk
+- install kubectl
 
-### 5. Run the app using loadbalancer ip
+by ansible playbook :
 
-![loadbalancer](images/loadbalancer.png)
+```bash
+ansible-playbook packages.yaml
+```
 
-<p align="center">
-  <img src="images/app.png" width="500" height="230" title="hover text">
-</p>
+## 3. Jenkins deployment
+
+1. **Create custom image of jenkins with gcloud and kubectl** 
+
+```docker
+./jenkins_deployment/Dockerfile :
+
+FROM jenkins/jenkins:lts
+USER root
+...
+RUN apt-get install -y kubectl
+...
+RUN apt-get install google-cloud-sdk
+...
+RUN apt-get install google-cloud-sdk-gke-gcloud-auth-plugin
+USER jenkins
+```
+
+1. **Build and push jenkins image to dockerhub :**
+
+```bash
+docker build . -t dockerhub/myimage:jenkinskube
+docker push dockerhub/myimage:jenkinskube
+```
+
+## 4. C**reate jenkins deployment on the cluster :**
+
+1. **Run ansible script**
+
+```bash
+ansible-playbook kubernetes.yaml
+```
+
+- Create namespace
+- Create service account
+- Create Persistent volume claim and storage class
+- Create jenkins deployment
+- Create load balancer service
+- Create jenkins jnlp service
+
+1. **Check the volume is bound to jenkins deployment** 
+
+![Untitled](images/Untitled%201.png)
+
+1. **Check deployment is running**
+
+![Untitled](images/Untitled%202.png)
+
+1. **Get Loadbalancer External ip** 
+
+![Untitled](images/Untitled%203.png)
+
+1. **Access jenkins server**
+
+![Untitled](images/Untitled%204.png)
