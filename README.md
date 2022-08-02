@@ -1,6 +1,10 @@
-# ITI-Graduation-Project
 
-## Infra
+<h1 align="center">ITI-Graduation-Project</h1>
+
+<h2 align="center">Infrastructure</h2>
+
+
+
 
 ## Requirements :
 
@@ -81,8 +85,10 @@ ansible-playbook kubernetes.yaml
 ![Untitled](images/Untitled%201.png)
 
 1. **Check deployment is running**
+<p align="center">
+<img src="images/Untitled%202.png" width="500" height="160" title="hover text">
+</p>
 
-![Untitled](images/Untitled%202.png)
 
 1. **Get Loadbalancer External ip** 
 
