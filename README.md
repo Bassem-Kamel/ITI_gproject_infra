@@ -80,20 +80,20 @@ ansible-playbook kubernetes.yaml
 - Create load balancer service
 - Create jenkins jnlp service
 
-1. **Check the volume is bound to jenkins deployment** 
+2. **Check the volume is bound to jenkins deployment** 
 
 ![Untitled](images/Untitled%201.png)
 
-1. **Check deployment is running**
+3. **Check deployment is running**
 <p align="center">
 <img src="images/Untitled%202.png" width="500" height="160" title="hover text">
 </p>
 
 
-1. **Get Loadbalancer External ip** 
+4. **Get Loadbalancer External ip** 
 
 ![Untitled](images/Untitled%203.png)
 
-1. **Access jenkins server**
+5. **Access jenkins server**
 
 ![Untitled](images/Untitled%204.png)
