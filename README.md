@@ -10,7 +10,7 @@
 
 ### 1. Create infrastructure on GCP
 
-### 2. Configure bastion-vm
+### 2. Configure bastion-vm with ansible
 
 ### 3. Customize jenkins image and create jenkins deployment
 
@@ -27,6 +27,8 @@
 ```bash
 Terraform apply
 ```
+
+![Untitled](images/infra.png)
 
 ## 2. Configure bastion-vm
 
@@ -80,13 +82,23 @@ ansible-playbook kubernetes.yaml
 - Create load balancer service
 - Create jenkins jnlp service
 
+<p align="center">
+<img src="images/jk8s.png" width="560" height="360" title="hover text">
+</p>
+
+
 2. **Check the volume is bound to jenkins deployment** 
 
-![Untitled](images/Untitled%201.png)
+
+<p align="center">
+<img src="images/Untitled%201.png" width="500" height="200" title="hover text">
+</p>
+
+
 
 3. **Check deployment is running**
 <p align="center">
-<img src="images/Untitled%202.png" width="500" height="160" title="hover text">
+<img src="images/Untitled%202.png" title="hover text">
 </p>
 
 
