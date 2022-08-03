@@ -83,7 +83,7 @@ ansible-playbook kubernetes.yaml
 - Create jenkins jnlp service
 
 <p align="center">
-<img src="images/jk8s.png" title="hover text">
+<img src="images/jk8s.png" width="auto" height="500"title="hover text">
 </p>
 
 
