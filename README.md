@@ -15,7 +15,7 @@
 ### 3. Customize jenkins image and create jenkins deployment
 
 <p align="center">
-<img src="images/Untitled.png" width="auto" height="700"title="hover text">
+<img src="images/Untitled.png" width="auto" height="650"title="hover text">
 </p>
 
 
