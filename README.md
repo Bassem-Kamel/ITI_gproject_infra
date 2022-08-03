@@ -83,7 +83,7 @@ ansible-playbook kubernetes.yaml
 - Create jenkins jnlp service
 
 <p align="center">
-<img src="images/jk8s.png" width="560" height="360" title="hover text">
+<img src="images/jk8s.png" title="hover text">
 </p>
 
 
@@ -91,7 +91,7 @@ ansible-playbook kubernetes.yaml
 
 
 <p align="center">
-<img src="images/Untitled%201.png" width="500" height="200" title="hover text">
+<img src="images/Untitled%201.png" title="hover text">
 </p>
 
 
@@ -104,7 +104,10 @@ ansible-playbook kubernetes.yaml
 
 4. **Get Loadbalancer External ip** 
 
-![Untitled](images/Untitled%203.png)
+<p align="center">
+<img src="images/Untitled%203.png" title="hover text">
+</p>
+
 
 5. **Access jenkins server**
 
