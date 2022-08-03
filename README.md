@@ -91,7 +91,7 @@ ansible-playbook kubernetes.yaml
 
 
 <p align="center">
-<img src="images/Untitled%201.png" title="hover text">
+<img src="images/Untitled%201.png" width="570" height="200" title="hover text">
 </p>
 
 
@@ -105,7 +105,7 @@ ansible-playbook kubernetes.yaml
 4. **Get Loadbalancer External ip** 
 
 <p align="center">
-<img src="images/Untitled%203.png" title="hover text">
+<img src="images/Untitled%203.png" width="550" height="140" title="hover text">
 </p>
 
 
