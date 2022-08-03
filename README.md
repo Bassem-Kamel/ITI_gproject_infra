@@ -6,13 +6,23 @@
 
 
 
-## Requirements :
+
+## Reguirements 
+• Deploy backend application on kubernetes cluster using CI/CD
+jenkins pipeline using the following steps and high-level
+diagram :
+1. Implement secure Kubernetes cluster 
+2. Deploy and configure Jenkins on Kubernetes.
+3. Deploy backend application on Kubernetes using Jenkins pipeline.( in App repo)
+
+## Steps
 
 ### 1. Create infrastructure on GCP
 
 ### 2. Configure bastion-vm with ansible
 
 ### 3. Customize jenkins image and create jenkins deployment
+<br></br>
 
 <p align="center">
 <img src="images/Untitled.png" width="auto" height="650"title="hover text">
