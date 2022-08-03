@@ -91,21 +91,21 @@ ansible-playbook kubernetes.yaml
 
 
 <p align="center">
-<img src="images/Untitled%201.png" width="570" height="200" title="hover text">
+<img src="images/Untitled%201.png" width="auto" height="280" title="hover text">
 </p>
 
 
 
 3. **Check deployment is running**
 <p align="center">
-<img src="images/Untitled%202.png" title="hover text">
+<img src="images/Untitled%202.png" width="auto" height="180" title="hover text">
 </p>
 
 
 4. **Get Loadbalancer External ip** 
 
 <p align="center">
-<img src="images/Untitled%203.png" width="550" height="140" title="hover text">
+<img src="images/Untitled%203.png" width="auto" height="180" title="hover text">
 </p>
 
 
