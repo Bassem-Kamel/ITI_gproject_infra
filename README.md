@@ -14,7 +14,11 @@
 
 ### 3. Customize jenkins image and create jenkins deployment
 
-![Untitled](images/Untitled.png)
+<p align="center">
+<img src="images/Untitled.png" width="auto" height="700"title="hover text">
+</p>
+
+
 
 ## 1. Build infrastructure using Terraform
 
